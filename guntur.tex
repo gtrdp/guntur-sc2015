@@ -101,26 +101,47 @@
 
 %% the only exception to this rule is the \firstsection command
 \firstsection{Introduction}
-
 \maketitle
+
+By the turn of the century, the fast development of digital technologies is creating not only new opportunities for our society but challenges to it as well. Our society is now being reshaped by rapid advances by technologies in the field of education, telecommunications, sciences and many more. Today, e-learning and cloud computing is emerging as the new-fangled paradigm of modern education with reduced upfront investment for teachers and the apprentices. E-learning is an Internet based learning process, using Internet technology to design, implement, select, manage, support and extend learning, which will not replace traditional educational methods, but will greatly improve the efficiency of higher education \cite{SudhirKumarSharmaNidhiGoyal2014}.
+
+An increasing number of universities and educational institutions in the USA and UK are adopting cloud computing not only for increased cost savings but also for improving the efficiency and convenience of educational services [1]. The cloud computing systems have been conducted for e-learning services [2-6]. However, most of the current cloud-based education systems focus on delivering and sharing learning materials rather than supporting and establishing an integrated, total cloud-based educational service environment.
+
+The rest of this review paper is organized as follows. Section 2 starts with general introduction into middleware. Section 3 illustrates the recent protocols and standards applied at middleware. Section 4 shows the categorization of middleware technologies according to the context of the study. Section 5 provides illustration for the main requirements of smart spaces with regard to middleware technology for services in ubiquitous computing. Section 6 gives some practices of current smart homes projects. Section 7 studies the middleware of SM4ALL and the rest of the practices described in section 6, according to the characteristics given in section 5. Section 8 describes the future directions of research work within the middleware for smart homes. Section 9 is the research conclusion.
 
 %% \section{Introduction} %for journal use above \firstsection{..} instead
 
 \section{E-Learning and Smart Learning}
+% Smart Learning
+The smart learning (s-learning) has become an important way of learning during the last few years \cite{Kim2013}. It has been made possible by the recent advancements in the Mobile Internet and Information technologies. The S-learning has a major role in creating a good and personalized learning environment, and also being well adapted to the current education model wherever possible \cite{Uden2007}. Usually, the teaching and learning that e-learning offers is only inside of a lecture-style classroom with desktop computers. Though the students could download information and browse through the existing e-learning platform regardless of time and place, they were still confined to the limits of the wired classroom-setups.
+
+The concept of s-learning plays an important role in the creation of an efficient learning environment that offers personalized contents and easy adaptation to current education model. It also provides learners with a convenient communication environment and rich resources. However, the existing-learning infrastructure is still not complete. For example, it does not allocate necessary computing resources for s-learning system dynamically \cite{Kim2013}. Currently, the majority of s-learning systems have difficulty in interfacing and sharing data with other systems, i.e., it falls short of systematic arrangement, digestion and absorption of the learning contents in other systems. This may lead to duplication in creating teaching resources and low utilization of existing resources. To resolve this problem, it is recommended to use cloud computing to support resource management.
 
 \section{Cloud Computing and Education}
   \subsection{Necessity of Cloud Computing in Educational System}
+  Cloud computing is reducing the difference between on campus education and distance education still there are few limitations of E-learning for Lab based education due to computation power. Fortunately cloud computing is the technology which can offer different services in three layers. cloud computing enable students to access the knowledge by sharing distributed E-learning resources in a public, private or hybrid cloud systems. Due to using cloud computing system for deploying a modern educational systems, universities and other organizations must take to account various items such as cost and accelerate delivery of learning service, quickly learning, and privacy issue. Therefore, cloud service providers should especially attended to offering cloud-based learning for improving education status in poor countries in Asia and Africa \cite{Bouyer2014}.
+
   \subsection{Cloud Computing and Smart Learning}
   %insert some tables here
 
 \section{Approaches of Cloud Computing System in Smart Learning}
   \subsection{Elastic Model}
-  \subsection{Win Azure}
+  \subsection{Context-aware}
+  Context-aware is important \cite{Pratama2014}.
   \subsection{Ontology}
+  The work of \cite{nasr2012proposed} has described this approach.
 
 \section{Discussion} % (fold)
-  \subsection{Benefits} % (fold)
-  
+  \subsection{Advantages of Cloud Computing in Education} % (fold)
+  Some benefits are drawn based on \cite{Gonzalez-Martinez2014}.
+
+    \subsubsection{A wealth of online application to support education}
+    \subsubsection{Flexible creation of learning environments}
+    \subsubsection{Support for mobile learning}
+    \subsubsection{Computing-intensive support for teaching, learning, and evaluation}
+    \subsubsection{Scalability of learning systems and applications}
+    \subsubsection{Costs saving in hardware}
+    \subsubsection{Cost saving in software}
   % subsection benefits (end)
   \subsection{Drawbacks} % (fold)
   
@@ -129,12 +150,21 @@
 % section discussion (end)
 
 \section{Concluding Remarks}
+Smart Learning can be improved using smart cloud computing.
+
+Since the main goal for this paper is to study whether the existing middleware practices at smart homes support the requirements of ubiquitous computing environments or not. This paper concludes that there are good smart homes infrastructures and practices e.g., SM4All and Gaia projects, that consider most of the basics of the ubiquitous computing needs (e.g., dynamicity, scalability, depend- ability, security and/or privacy). This done by first introducing the concept of middleware and its protocols and standards which are relevant for the projects e.g., UPnP and OSGi. Then, I classify middleware according to three types: object-oriented, service based, and object oriented base. Following this, a definition of requirements for smart spaces with regard to middleware technology are highlighted. These requirements are kept generic (e.g., dynamicity, dependability, scalability, security, and privacy) in order to allow the identification of criteria for the evaluation of middleware technology.
+
+After that, I choose SM4ALL, RUNES, ANGEL, GTSH, Gaia, and Serenity as examples of the current practice middleware technologies projects at smart homes, discussing them with their comparisons for the middleware part according to the mentioned classification and the given ubiquitous requirements. The findings are that some projects touched the topics of dynamicity, scalability, and dependability at the middleware-service level. Also, a few of them filled the security and privacy needs. The only project that covers all defined requirements is SM4All.
+
+However, the horizons of the present practices middleware will have to expand more and more to cater for the new requirements of ubiquitous computing (e.g., support of heterogeneity, mobility, tolerance for component failures, controlling and traceability, and ease of deployment and configuration) if they want to survive in the emerging smart space environments. This study help giving a look of the existing works of middleware at smart homes, and showing the requirements for the future vision. Moreover, it is not clear at this point exactly what smart space middleware will consist of. What is likely, however, is that various smart space architectures will emerge independently of each other which greatly increases the need for middleware to provide interoperability between heterogeneous systems.
+
+This paper has compared and reviewed several researches and articles about cloud computing services in smart learning environment.
 
 % \acknowledgements{
 % The authors wish to thank Dr. for the help on this work.}
 
 \bibliographystyle{abbrv}
 %%use following if all content of bibtex file should be shown
-\nocite{*}
+% \nocite{*}
 \bibliography{sc2015}
 \end{document}
