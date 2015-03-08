@@ -72,6 +72,8 @@
 
 %% Abstract section.
 \abstract{Cloud computing services offer several benefits in its implementation to e-learning system, such as increased cost savings and also improved efficiency and convenience of educational services. Furthermore, e-learning services can be also enhanced to be smarter and more efficient using context-aware technologies as context-aware services are based on the user’s behavior. To add those technologies into existing e-learning services, a service architecture model is needed to transform the existing e-learning environment, which is situation-aware, into the environment that understands context as well. The rationale behind this paper is to study the existence or lack of existing approaches regarding the implementation of cloud computing services in smart learning system. This is done by surveying the state of the art in the area, and illustrating the requirements of context-aware smart learning system with regard to some important factors: dynamicity, scalability, dependability, security and privacy. This paper is eager to help investigating the works that have been done before for cloud computing services in smart learning system and to show the possible requirements for the future smart learning system.
+
+Which approach is the most suitable to be implemented.
 } % end of abstract
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
@@ -155,30 +157,94 @@ This section describes the close relation between cloud computing and educationa
 
   Cloud computing also owns several important benefits for education \cite{Bouyer2014}. Those important advantages are a quick delivery of various services, cost minimization, risk reduction, security enhancements, reshaping teaching, and collaboration expansion.
 
-  \subsection{Cloud Computing and Cloud-Based Application in Smart Learning}
-  The cloud computing is defined as a technology that provides its users with IT resources by using the Internet as a medium. The users can use IT resources such as application software or storage space from the cloud without needing to own them. The users only need to pay per usage charges for the resources they used. The concept of cloud computing is not new. It is the combination of distributed computing, grid computing, utility computing, etc. [3-5]. When a user requests services from some cloud server, the server immediately provides the requested services to the user based on their request details. It means that the cloud computing has the ability to customize its service to each user. Since servers charge fees based on usage, it can automatically guide its users of their service request based on previous usages. These features allow that users to use the service only the amount they need at their desired time. Also, there are numerous cloud based applications that are freely available and the trend for that continues to grow [6,7]. There are a number of cloud-based applications available in the e-learning sector as well \cite{s110807835}.
+  \subsection{Cloud-Based Application in E-Learning}
+  The cloud computing is defined as a technology that provides its users with IT resources by using the Internet as a medium. The users can use IT resources such as application software or storage space from the cloud without needing to own them. The users only need to pay per usage charges for the resources they used. The concept of cloud computing is not new. It is the combination of distributed computing, grid computing, utility computing, etc. \cite{s110807835}. When a user requests services from some cloud server, the server immediately provides the requested services to the user based on their request details. It means that the cloud computing has the ability to customize its service to each user. Since servers charge fees based on usage, it can automatically guide its users of their service request based on previous usages. These features allow that users to use the service only the amount they need at their desired time.
   
-  Casquero et al. [8] presented a framework based on iGoogle and using the Google Apps infrastructure for the development of a network of cooperative personal learning environments. They discussed the integration of institutional and external services in order to provide customized support to faculty members in their daily activities. They also take advantage of the framework as a test-bed for the research, implementation and testing of their educational purpose services. Marenzi et al. [9] investigated how educational software can be used in an academic or corporate learning environment. They integrated models and tools that they developed into an open source environment for the creation, storage and exchange of learning objects as well as learning experiences. They presented the “LearnWeb 2.0” infrastructure to support lifelong learning and to enhance the learning experience. This infrastructure brings together information stored on institutional servers, centralized repositories, learners’ desktops, and online community—sharing systems like Flickr and YouTube. Sedayao [10] proposed an online virtual computing lab that offers virtual computers equipped with numerous applications such as Matlab, Maple, SAS, and many others that can be remotely accessed from the Internet.
+  Several works have presented their approach to implement cloud computing in e-learning. For example, Casquero et al. \cite{casquero2008igoogle} presented a framework based on iGoogle and using the Google Apps infrastructure for the development of a network of cooperative personal learning environments. They discussed the integration of institutional and external services in order to provide customized support to faculty members in their daily activities. They also take advantage of the framework as a testbed for the research, implementation and testing of their educational purpose services. Sedayao [10] proposed an online virtual computing lab that offers virtual computers equipped with numerous applications such as Matlab, Maple, SAS, and many others that can be remotely accessed from the Internet.
 
-  Several companies including are accelerating delivery of cloud-based education systems to educational institutes as a way of generating future business, and several learning management systems are also now supporting cloud-based educational services [8]. Although much work has been done to date with regard to adopting cloud computing for educational systems, further studies need to be conducted to develop more diverse forms of cloud-based education systems, in more innovative and efficient ways. Meanwhile, most of the current cloud-based education systems are concentrating on delivering and sharing learning materials and teaching activities, rather than constructing and supporting an integrated, total cloud-based educational environment.
+  Although much work has been done to date with regard to adopting cloud computing for educational systems, further studies need to be conducted to develop more diverse forms of cloud-based education systems, in more innovative and efficient ways \cite{jeong2013content}. Meanwhile, most of the current cloud-based education systems are concentrating on delivering and sharing learning materials and teaching activities, rather than constructing and supporting an integrated, total cloud-based educational environment.
   %insert some tables here
 
 \section{Cloud Computing in Smart Learning System Approaches}
-There are several approaches of cloud computing sThis study has reviewed several approaches of cloud computing in smart learning system. Some approaches that are
+There are several approaches for implementing cloud computing in smart learning environment. This study has reviewed several recent approaches \cite{Kim2013,s110807835,jeong2013content,jeong2013cloud,nasr2012proposed}. Those approaches can be categorized into certain categories: smart cloud computing, elastic model, ontology, and content oriented approach.
 
-The literature search covered contributions until and including December 2012, and was performed using the databases considered most relevant to find the targeted studies: IEEE Xplore Digital Library, ACM Digital Library, ScienceDirect, Scopus and Springer. The search string used was: (“cloud” OR “virtualization”)AND (“education” OR “learning” OR “teaching”). This search string was conceived with the aim of retrieving a high number of the studies available in the databases thatwere relevant for the revieweven if the results of the query returned many other works not relevant for the survey (i.e. the query pursued having a high recall in spite of a low precision, in terms of information retrieval). Relevant studies not found after this searchwere expected to appear among the referenced bibliography of these results, as itwas the case, and theywere also included in a second analysis iteration. Only primary studies published in English and contained in journals (both printed
+% The literature search covered contributions until and including December 2012, and was performed using the databases considered most relevant to find the targeted studies: IEEE Xplore Digital Library, ACM Digital Library, ScienceDirect, Scopus and Springer. The search string used was: (“cloud” OR “virtualization”)AND (“education” OR “learning” OR “teaching”). This search string was conceived with the aim of retrieving a high number of the studies available in the databases thatwere relevant for the revieweven if the results of the query returned many other works not relevant for the survey (i.e. the query pursued having a high recall in spite of a low precision, in terms of information retrieval). Relevant studies not found after this searchwere expected to appear among the referenced bibliography of these results, as itwas the case, and theywere also included in a second analysis iteration. Only primary studies published in English and contained in journals (both printed
 
   \subsection{Smart Cloud Computing}
-  The Smart Cloud Computing (SCC for short) based on elastic computing for 4S model has the capability to provide a smart learning environment. It encourages learning system standardization and provides a means for managing it. A traditional e-learning system can display single content on a single device or multiple contents on one device. The SCC can deliver s-learning to the users so they can use multiple devices to render multi learning contents. The multi learning contents can be played in different devices separately to form a “virtual class”. For this, the SCC uses context-aware sensing. Sensing through the location and IP address of each device, it can orchestrate all devices. The architecture of the model is shown in the Figure 2 \cite{s110807835}.
+  The Smart Cloud Computing (SCC for short) based on elastic computing for 4S model has the capability to provide a smart learning environment. It encourages learning system standardization and provides a means for managing it. A traditional e-learning system can display single content on a single device or multiple contents on one device. The SCC can deliver s-learning to the users so they can use multiple devices to render multi learning contents. The multi learning contents can be played in different devices separately to form a “virtual class”. For this, the SCC uses context-aware sensing. Sensing through the location and IP address of each device, it can orchestrate all devices. The architecture of the model is shown in the Figure \ref{scc} \cite{s110807835}.
+
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{scc}
+    \caption{Smart Cloud Computing Architecture \cite{s110807835}.}
+    \label{scc}
+  \end{figure}
+
+  Figure \ref{scc} shows how the SCC provides smart learning to the user. It is using Elastic 4S based on information obtained from the user. The information of the user includes the information about the user and the device, received by context-aware sensors. Context-aware monitoring monitors user request(s) and the kind of device(s) that the user is currently using. By using the information collected by the sensors, SCC can provide user-aware service based on Elastic 4S. Elastic 4S is performed through an intelligent learning engine that consists of the rules based on the four services—Smart Pull, Smart Prospect, Smart Content and Smart Push. These four smart services provide high quality services according to the definition of E4S that is described as follows:
+
+  \begin{equation}
+    \{E4S_i\}=\{(Spull_i , Spros_i, Scon_i, Spush_i)\}, 1\leq i \leq N
+  \end{equation}
+
+  where:
+
+  \begin{itemize}
+    \item[] $Spull_i$: Smart pull—analyze the extractable content from the sensing information. 
+    \item[] $Spros_i$: Smart prospect—description of the content for target devices and delivery time.
+    \item[] $Scon_i$: Smart content—connection establishment between server and target devices.
+    \item[] $Spush_i$: Smart push—synchronized delivery of contents to target devices.
+  \end{itemize}
+
+  As shown in the definition, the E4S pulls the sensing data and analyzes the extractable contents. The context-aware module is functioning as an information filter that extracts only the intended information from the sensing data. There can be multiple contexts in sensing data depending on the services available in the learning management system. They are individually synchronized and pushed by the smart learning service. The sensing data analysis process identifies the different backgrounds of each learner and accommodates each learner’s needs individually. Learning contents are customized based on the background and learning needs. It means that different learning content may have unique technical and functional characteristics and may use different communication channels. Each customized learning contents may differ in modality (i.e., text-based, audio, video, etc.), capability (i.e., bandwidth), and timing (i.e., types of synchronization).
+
+  The system also offers context-aware services, since Context-aware is important \cite{Pratama2014}. A research also contributed to implement context-aware services in educational system \cite{Scott2010}. However, cloud computing were not used as this study only focuses on context-aware in classroom setup only.
 
   \subsection{Elastic Model}
-  % This is WRONG, please change this
-  The smart learning (s-learning) has become an important way of learning during the last few years \cite{Kim2013}. It has been made possible by the recent advancements in the Mobile Internet and Information technologies. The S-learning has a major role in creating a good and personalized learning environment, and also being well adapted to the current education model wherever possible \cite{Uden2007}. Usually, the teaching and learning that e-learning offers is only inside of a lecture-style classroom with desktop computers. Though the students could download information and browse through the existing e-learning platform regardless of time and place, they were still confined to the limits of the wired classroom-setups.
-  
-  \subsection{Context-aware}
-  Context-aware is important \cite{Pratama2014}.
+  The cloud computing enable cloud servers to provide smart learning service to users through additional intelligent processes on existing cloud system. The most important responsibility of the servers is to perform elastic processes such as Elastic Computing for Infrastructure as a Service (IaaS), Elastic Management for Platform as a Service (PaaS) and Elastic Deployment for Software as a Service SaaS) constantly. The elastic processing can be described as collecting user information that is pulled by the sensors in the users' mobile devices and process the pulled information in real-time so that it can accommodate users' changing situation dynamically.
 
-  Despite advances in mobile, interactive, and ubiquitous technology, the adoption of instructional technology and learning aids in traditional learning spaces has been lackluster. The system described in this paper is designed from the ground up to be affordable to implement, easy to operate, and most importantly, it is designed to keep the focus on the learning material by offering flexible and efficient learning interactions. It includes a cost-effective room-level location detection system based on IR light. This provides context awareness and allows the system to dynamically adapt based on its surroundings. Finally, the system provides efficient knowledge dissemination and sharing, and collaboration capabilities based on Semantic Web technology. It is designed to enhance traditional learning situations with modern instructional technology including handheld devices. The system has the potential to expand beyond indoor learning spaces through the use of mobile technology and other communication systems, thus providing a completely comprehensive learning experience \cite{Scott2010}.
+  A study conducted by Kim et al. \cite{Kim2013} proposed the Elastic Conductor that performs provisioning and scheduling for the decision of smart activities. The provisioning and scheduling are performed through an inference engine that utilizes the rules based on three attributes—an object id for user context, a predicate relationship for user behavior, and a value for thinking. The elastic conductor is utilized in PaaS as a smart activity.
+  
+  The Elastic Conductor it can also generate user interface configurations, such as personalized views and content rendering for each individual user. These processing tasks include four smarts concept: Behavior sensing, Behavior matching, Synchronization and Push – for displays multi-contents on the multi-device or all content on the one device to render learning content. Using sensing context-awareness through the location and IP address of each device, it can orchestrate all devices. Therefore, the multi learning contents can be played in different devices separately to form a \"virtual class\". The architecture of the model is show in the Figure \ref{elastic-conductor}.
+
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{elastic-conductor}
+    \caption{Elastic conductor architecture \cite{Kim2013}.}
+    \label{elastic-conductor}
+  \end{figure}
+
+  The Figure \ref{elastic-conductor} shows how the conductor provides smart learning to the user. The information of the user included the information about the user and the device, received by context-awareness sensor. Context-awareness monitoring monitors user request(s) and the kind of device(s) that the user is currently using. By using the information collected by the sensors, conductor (1) pulls the sensing information and analyses the extractable contents. The behavior sensing (2) concept is functioning as an information filter that extracts only the intended information from sensing data and (3) storage in the user-behavior context DB. There can be multiple contexts in sensing data depends on the services available in the learning management system. The behavior
+
+  To provide the smart learning service to each individual user, the behavior sensing concept must automatically deduce the actual situation from the user's situation. The behavior sensing is the process of extracting user's behavior information through a variety of sensors to filter information from the sensing information. The filtered information is analyzed to determine user's behavior patterns which the collaboration context information to receive a correct set of user preference, GPS and value of terminal MAC-ID (show the Figure \ref{behaviour-sensing}).
+
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{behaviour-sensing}
+    \caption{Behavior sensing domain ontology \cite{Kim2013}.}
+    \label{behaviour-sensing}
+  \end{figure}
+
+  The filtered process in behavior sensing is defined with the rating function as:
+
+  \begin{equation}
+    R: Ua \times Ui \times T \times L \times D \rightarrow Rating
+  \end{equation}
+
+  where Ua is user action, Ui is user interest, L is location, T is time, D is device are the information of user situation  and user environment sensing respectively, Rating is the  information of rating. The Ua dimension is defined as Userc U action c U requestc Learning object title and consist of set of user situation. Similarly, the Ui dimensions are defined as Userc U interests U needs c U expertise I experience. The L is defined as Location c Homes Street c Company. The T is defined as Time c Month c Day c Morning c Lunch c- Afternoon c Evening. Finally, the D dimension can be defined as Device c Terminal MAC ID c Application type.
+
+  For instance, continuing Ua x Ui x T x L x D example considered above, we can define a rating function R on the filtered process Ua x Ui x T x L x D specifying what a user's request Ua E User action and how much user interested item Ui E User interest at the time T E Time in user's location L e Location and used application type of device D e Device, R(Ua, Ui, T,L,D). Visually, ratings R on the filtered process is can be stored in a multidimensional cube, such as the one shown in "Fig. 3".
+
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{rating}
+    \caption{Rating for the $Ua \times Ui \times T \times L \times D$ in filtered process\cite{Kim2013}.}
+    \label{rating}
+  \end{figure}
+
+  The double cube in Figure \ref{rating} is stored rating R(Ua, Ui, T, L, D) for the filtered proves $Ua \times Ui \times T \times L \times D$, where the five tables define the sets of user action, interest, location, time and device associated with Action, Interest, Time x Location and Device dimensions respectively.
+
+  For example, the rating R(303,1302,2,ASP1)=7 in Fig. 3 is means that for the action with action ID 303, the user's interest learning object is interest ID 1302 and using this item mainly Time ID 5 in the Location Company, rating 7was specified during in the device ID ASP1. In other words, the user every afternoon is using application (ID 1302) at the street using smart phone. So that filtered data is basis for creating user behaviour database (DB) for providing smart learning service. According to following classification the situation is determine then user behaviour database will be created.
+
   
   \subsection{Ontology}
   The work of \cite{nasr2012proposed} has described this approach.
@@ -191,6 +257,34 @@ The literature search covered contributions until and including December 2012, a
   \subsection{Content Oriented}
   This paper proposed a content-oriented smart education system based on cloud computing that integrates a number of features required for implementing a cloud-based educational media service environment. The aim was to develop a total, integrated education content service system based on cloud computing to deliver and share a variety of enhanced forms of educational content, such as text, images, video, audio, animations, memos, quizzes, and 3D and AR objects. For the realization of a cloud- based content service system, we developed six main features. First, by leveraging several IT and cloud computing technologies, we established a private cloud platform to install and operate a cloud-based educational media service environment. In addition, we identified the software and applications required for the proposed cloud-based education services. Second, we developed a common file format enabling manipulation of various forms of media content on multiple platforms using XML, WebGL, and HTML5. Third, we implemented an authoring tool, allowing teachers to create various types of smart media content, including text, images, pictures, videos, and 3D and AR objects. Fourth, we developed a content viewer to display media content on diverse types of devices, such as PCs, notebooks, netbooks, tablets, smart TVs, and smartphones, through a multi-platform based design. Fifth, we implemented an inference engine to provide students with customized individual learning content by analyzing their learning and content usage patterns. Sixth, a security system was included in the proposed system to encrypt data and to control user access for dependable smart media content services \cite{jeong2013content} \cite{jeong2013cloud}.
 
+  Figure \ref{archi} presents the proposed cloud-based education system for smart media content services [12, 14]. The proposed system enables delivery and sharing of a variety of enhanced educational content by integrating a number of features required for the deployment of a cloud-based educational media service environment. Figure 2 shows the proposed system with its six main features required for deploying cloud-based educational content service.
+
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{content-oriented-archi}
+    \caption{Architecture of the proposed cloud-based education system for smart content services \cite{jeong2013content}.}
+    \label{archi}
+  \end{figure}
+  
+  Teachers in schools are able to create various forms of learning content, including text, images, video, 3-dimensional (3D) objects, and virtual scenes based on virtual reality (VR) and augmented reality (AR), using an authoring tool provided by the system. The content is managed in the cloud in a compatible common file format. The system supports various platforms, such as personal computers (PCs), notebooks, tablets, smart TVs, and smartphones. The system also provides a content viewer for displaying learning content and an inference engine to support content customized to each individual student, based on their preferences and knowledge. An inference engine is included to provide students with personalized learning content by analyzing their preferences, learning styles, and content usage patterns. In addition, a security system is provided for controlling data access and encryption in the cloud.
+
+  \begin{figure}[htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{content-oriented-feature}
+    \caption{Infrastructure of the proposed system with its six main features \cite{jeong2013content}.}
+    \label{feature}
+  \end{figure}
+
+  Cloud Platform: The proposed system established a private cloud platform to provide an infrastructure for the implementation of a cloud-based educational media service environment by applying several IT and cloud computing technologies, such as data synchronization, virtualization, service provisioning, and multi-sharing services. In other words, we configured a private cloud platform to install and operate a cloud-based educational media service environment by leveraging IT and cloud computing technologies. In addition, we identified software and applications required for the proposed cloud-based education service and allocated them to the three cloud service models (IaaS, PaaS, and SaaS) as shown in Figure 3.
+
+  We developed a common file format to be able to manipulate various types of media content on multiple device platforms based on an XML document format with HTML5, eXtensible 3-Dimensional (X3D), and JavaScript.
+  
+  XML has been used in many areas as a means of representing data and meta-data. It consists of two components: the Document Type Definition (DTD) that defines the schema for the XML document structure and the eXtensible Style sheet Language (XSL) that describes styles for representing XML data. That is, XML separately represents content and style, so that the same content can be viewed on multiple devices by defining only the styles appropriate to each device. XML is also designed to make it easy not only to describe many different kinds of data but also to send and receive data between computer systems connected to the Internet, such as data transmission in smartphones [13]. For these reasons, we adopted XML as the basic representation language for developing a common file format for various types of contents. Table 1 summarizes the content types defined in the common file format [13]. These content types are inserted and handled in a document file as a control. We divided the content types into two categories: basic controls that are displayed in a 2D screen and interactive controls that can play 3D video and objects or respond to user actions. Each of these controls is defined with a number of properties and each property is specified with its own data type, such as numeric, character, or multiple choice. Table 2 shows the properties and provides brief explanations of each control defined in the common file format.
+
+  Authoring Tool: The system provides an authoring tool to allow teachers to create various types of smart media content including text, images, video, sounds, widgets, and 3D, VR, and AR objects and scenes. Figure 4 shows the content creation processes of the authoring tool system. The content creation process is divided into three phases: control creation, file configuration and editing, and distribution. In Phase 1, users can perform operations to create controls (content) to be inserted in documents. In Phase 2, users can set the layout of a document and then insert controls into the document. In Phase 3, the authoring system converts the newly-created document to the common file format then uploads the file to the server for distribution to client devices. The document structure of the authoring tool system follows the structure of the Flow Document of WPF (Windows Presentation Foundation). Figure 5 shows examples of a document creation process (Phase 2) using text and image controls (contents).
+
+  Content Viewer: We developed a content viewer to display media on multiple platforms. Figure 6 shows a number of devices supported by the content viewer. The contents created by the authoring tool are saved in the XML-based common file format described in Section 3.2.2. The viewer displays content on each device by converting the XML data to HTML, appropriate to each device. We used XSLT (Extensible Style sheet Language Transformations) for the file format conversion. XSLT is a language for transforming XML documents into other file formats. The content of the basic controls specified in Table 1 can be easily converted to HTML format via XSLT. However, it is difficult to covert the XML data of the interactive control content (i.e., audio, animations, 3D objects) to HTML format with XSLT. To solve this problem, we create an HTML area for displaying an interactive control, and then display the corresponding content on the HTML area through another content viewer we developed for visualizing interactive controls [13]. Figure 7 shows an example of learning content displayed on an iOS-based smartphone [13].
+
 % disguise this part, bcs this is really important part, dont mess with it
 \section{Discussion}
 % describe: what drives a successful e-learning comprehensively
@@ -198,17 +292,11 @@ The literature search covered contributions until and including December 2012, a
 This section draws the advantages and drawbacks of the reviewed works. This section will also reflect to the factors that drive a successful e-learning \cite{Sun2008}.
 
   \subsection{Advantages of Cloud Computing in Education}
-  Some benefits are drawn based on \cite{Gonzalez-Martinez2014}.
+  Some benefits of cloud computing in education are drawn in a study by Gonzalez et al. \cite{Gonzalez-Martinez2014}. Those advantages are a wealth of online application to support education, flexible creation of learning environments, support for mobile learning, computing-intensive support for teaching, learning, and evaluation, scalability of learning systems and applications, costs saving in hardware, cost saving in software.
 
-    \subsubsection{A wealth of online application to support education}
-    \subsubsection{Flexible creation of learning environments}
-    \subsubsection{Support for mobile learning}
-    \subsubsection{Computing-intensive support for teaching, learning, and evaluation}
-    \subsubsection{Scalability of learning systems and applications}
-    \subsubsection{Costs saving in hardware}
-    \subsubsection{Cost saving in software}
-  
-  \subsection{Drawbacks}
+  Factors in implementation of cloud computing \cite{morgan2013factors}.
+
+  % draw a table about whole comparison, as f alsaif did on her paper
 
 \section{Concluding Remarks}
 Smart Learning can be improved using smart cloud computing.
@@ -220,6 +308,8 @@ After that, I choose SM4ALL, RUNES, ANGEL, GTSH, Gaia, and Serenity as examples 
 However, the horizons of the present practices middleware will have to expand more and more to cater for the new requirements of ubiquitous computing (e.g., support of heterogeneity, mobility, tolerance for component failures, controlling and traceability, and ease of deployment and configuration) if they want to survive in the emerging smart space environments. This study help giving a look of the existing works of middleware at smart homes, and showing the requirements for the future vision. Moreover, it is not clear at this point exactly what smart space middleware will consist of. What is likely, however, is that various smart space architectures will emerge independently of each other which greatly increases the need for middleware to provide interoperability between heterogeneous systems.
 
 This paper has compared and reviewed several researches and articles about cloud computing services in smart learning environment.
+
+Further studies, which take these variables into account, will need to be undertaken.
 
 % \acknowledgements{
 % The authors wish to thank Dr. for the help on this work.}
