@@ -73,6 +73,8 @@
 %% Abstract section.
 \abstract{Cloud computing services offer several benefits in its implementation to e-learning system, such as increased cost savings and also improved efficiency and convenience of educational services. Furthermore, e-learning services can be also enhanced to be smarter and more efficient using context-aware technologies as context-aware services are based on the user’s behavior. To add those technologies into existing e-learning services, a service architecture model is needed to transform the existing e-learning environment, which is situation-aware, into the environment that understands context as well. The rationale behind this paper is to study the existence or lack of existing approaches regarding the implementation of cloud computing services in smart learning system. This is done by surveying the state of the art in the area, and illustrating the requirements of context-aware smart learning system with regard to some important factors: dynamicity, scalability, dependability, security and privacy. This paper is eager to help investigating the works that have been done before for cloud computing services in smart learning system and to show the possible requirements for the future smart learning system.
 
+However, duplication bla bla.
+
 Which approach is the most suitable to be implemented.
 } % end of abstract
 
@@ -157,7 +159,7 @@ This section describes the close relation between cloud computing and educationa
 
   Cloud computing also owns several important benefits for education \cite{Bouyer2014}. Those important advantages are a quick delivery of various services, cost minimization, risk reduction, security enhancements, reshaping teaching, and collaboration expansion.
 
-  \subsection{Cloud-Based Application in E-Learning}
+  \subsection{Cloud-Based Application in Education Systems}
   The cloud computing is defined as a technology that provides its users with IT resources by using the Internet as a medium. The users can use IT resources such as application software or storage space from the cloud without needing to own them. The users only need to pay per usage charges for the resources they used. The concept of cloud computing is not new. It is the combination of distributed computing, grid computing, utility computing, etc. \cite{s110807835}. When a user requests services from some cloud server, the server immediately provides the requested services to the user based on their request details. It means that the cloud computing has the ability to customize its service to each user. Since servers charge fees based on usage, it can automatically guide its users of their service request based on previous usages. These features allow that users to use the service only the amount they need at their desired time.
   
   Several works have presented their approach to implement cloud computing in e-learning. For example, Casquero et al. \cite{casquero2008igoogle} presented a framework based on iGoogle and using the Google Apps infrastructure for the development of a network of cooperative personal learning environments. They discussed the integration of institutional and external services in order to provide customized support to faculty members in their daily activities. They also take advantage of the framework as a testbed for the research, implementation and testing of their educational purpose services. Sedayao [10] proposed an online virtual computing lab that offers virtual computers equipped with numerous applications such as Matlab, Maple, SAS, and many others that can be remotely accessed from the Internet.
@@ -232,7 +234,7 @@ There are several approaches for implementing cloud computing in smart learning 
 
   where Ua is user action, Ui is user interest, L is location, T is time, D is device are the information of user situation  and user environment sensing respectively, Rating is the  information of rating. The Ua dimension is defined as Userc U action c U requestc Learning object title and consist of set of user situation. Similarly, the Ui dimensions are defined as Userc U interests U needs c U expertise I experience. The L is defined as Location c Homes Street c Company. The T is defined as Time c Month c Day c Morning c Lunch c- Afternoon c Evening. Finally, the D dimension can be defined as Device c Terminal MAC ID c Application type.
 
-  For instance, continuing Ua x Ui x T x L x D example considered above, we can define a rating function R on the filtered process Ua x Ui x T x L x D specifying what a user's request Ua E User action and how much user interested item Ui E User interest at the time T E Time in user's location L e Location and used application type of device D e Device, R(Ua, Ui, T,L,D). Visually, ratings R on the filtered process is can be stored in a multidimensional cube, such as the one shown in "Fig. 3".
+  For instance, continuing Ua x Ui x T x L x D example considered above, we can define a rating function R on the filtered process Ua x Ui x T x L x D specifying what a user's request Ua E User action and how much user interested item Ui E User interest at the time T E Time in user's location L e Location and used application type of device D e Device, R(Ua, Ui, T,L,D). Visually, ratings R on the filtered process is can be stored in a multidimensional cube, such as the one shown in Figure \ref{rating}.
 
   \begin{figure}[htb]
     \centering
@@ -289,12 +291,36 @@ There are several approaches for implementing cloud computing in smart learning 
 \section{Discussion}
 % describe: what drives a successful e-learning comprehensively
 % and reflects to the papers.
-This section draws the advantages and drawbacks of the reviewed works. This section will also reflect to the factors that drive a successful e-learning \cite{Sun2008}.
+This study tries to evaluate the above mentioned approach of cloud computing in smart learning system based on a study presented by Sun et al. \cite{Sun2008}. That work alleged that there are some factors that push a e-learning system to be successful. The work collected nearly 300 questionnaire and a stepwise multiple regression analysis was conducted to extract some potential information. The result showed that the factors are learner's computer anxiety, instructor attitude toward e-Learning, e-Learning course flexibility, e-Learning course quality, perceived usefulness, perceived ease of use, and diversity in assessment are the critical factors affecting learner's perceived satisfaction \cite{Sun2008}. However, since our study only tries to investigate the technical implementation of cloud computing without the involvement of students, instructors, or courses, factors that will be used are only usefulness, flexibility, ease of use, and assessment. Furthermore, in order to evaluate the approaches deeper, we add some more factors, such as context-awareness, security, multimedia support, and ontology.
 
-  \subsection{Advantages of Cloud Computing in Education}
-  Some benefits of cloud computing in education are drawn in a study by Gonzalez et al. \cite{Gonzalez-Martinez2014}. Those advantages are a wealth of online application to support education, flexible creation of learning environments, support for mobile learning, computing-intensive support for teaching, learning, and evaluation, scalability of learning systems and applications, costs saving in hardware, cost saving in software.
+Some benefits of cloud computing in education are drawn in a study by Gonzalez et al. \cite{Gonzalez-Martinez2014}. Those advantages are a wealth of online application to support education, flexible creation of learning environments, support for mobile learning, computing-intensive support for teaching, learning, and evaluation, scalability of learning systems and applications, costs saving in hardware, cost saving in software.
 
-  Factors in implementation of cloud computing \cite{morgan2013factors}.
+% smart cloud computing
+
+% elastic model
+
+% ontology
+
+% content-oriented
+
+% Factors in implementation of cloud computing \cite{morgan2013factors}
+
+In summary, every approaches are described in Table \ref{tab:comparison}:
+
+\begin{table}[htb]
+\centering
+\caption{This table shows some data}
+\label{tab:comparison}
+\scriptsize
+\begin{tabular}{llllll}
+ & Security & Context-awareness & Multmedia support & Ontology Model & Assessment \\
+\hline
+SCC &  &  &  &  &  \\
+Elastic Model &  &  &  &  &  \\
+Web 3.0 &  &  &  &  &  \\
+Content-oriented &  &  &  &  & 
+\end{tabular}
+\end{table}
 
   % draw a table about whole comparison, as f alsaif did on her paper
 
@@ -307,7 +333,9 @@ After that, I choose SM4ALL, RUNES, ANGEL, GTSH, Gaia, and Serenity as examples 
 
 However, the horizons of the present practices middleware will have to expand more and more to cater for the new requirements of ubiquitous computing (e.g., support of heterogeneity, mobility, tolerance for component failures, controlling and traceability, and ease of deployment and configuration) if they want to survive in the emerging smart space environments. This study help giving a look of the existing works of middleware at smart homes, and showing the requirements for the future vision. Moreover, it is not clear at this point exactly what smart space middleware will consist of. What is likely, however, is that various smart space architectures will emerge independently of each other which greatly increases the need for middleware to provide interoperability between heterogeneous systems.
 
-This paper has compared and reviewed several researches and articles about cloud computing services in smart learning environment.
+This paper has compared and reviewed several researches and articles about cloud computing services in smart learning environment. The result showed that there is no approaches that is able to cover all factors used in assessment. However, the nearest approaches is the work presented by John Doe et al. \cite{}.
+
+Recommed the cloud computing system to consider encryption in order to secure the personal data.
 
 Further studies, which take these variables into account, will need to be undertaken.
 
