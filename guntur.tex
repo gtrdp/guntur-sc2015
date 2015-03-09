@@ -31,6 +31,8 @@
 \usepackage{times}
 
 \usepackage{natbib}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
 
 %% We encourage the use of mathptmx for consistent usage of times font
 %% throughout the proceedings. However, if you encounter conflicts
@@ -296,34 +298,21 @@ Some benefits of cloud computing in education are drawn in a study by Gonzalez e
 This study tries to evaluate the above mentioned approach of cloud computing in smart learning system based on a study presented by Sun et al. \cite{Sun2008}. That work alleged that there are some factors that push a e-learning system to be successful. The work collected nearly 300 questionnaire and a stepwise multiple regression analysis was conducted to extract some potential information. The result showed that the factors are learner's computer anxiety, instructor attitude toward e-Learning, e-Learning course flexibility, e-Learning course quality, perceived usefulness, perceived ease of use, and diversity in assessment are the critical factors affecting learner's perceived satisfaction \cite{Sun2008}. However, since our study only tries to investigate the technical implementation of cloud computing without the involvement of students, instructors, or courses, factors that are possible to be used are only flexibility and assessment. Furthermore, in order to evaluate the approaches deeper, we add some more factors that are relevant with smart learning system, such as context-awareness, security, multimedia support, and ontology utilization.
 
 % smart cloud computing
-Kim et al. presented a smart learning services that is based on Smart Cloud Computing (SCC). As mentioned above, this approach offers smart learning services through 4S model, which are smart push, smart . Security feature is also covered in this approach, although it is just securing user's personal information through some security setting without data encryption. SCC also manages to implement context-awareness by utilizing context-aware sensors. The context-aware module considers the characteristics of each user individually, such as learners’ knowledge interests, needs, expertise, and experiences. Thus it can provide highly customized and relevant learning services to each user. Each cloud type (Iaas, Paas, Saas) are covered using smart cloud approach. Furthermore, no specific platform are used in this approach, this will lead in to a good flexibility. Semantic description based on UVA (Universal Video Adaptation) are used to provide accurate and meaningful information for the fusion content (content-database). The paper also managed to show the implementation with four fusion media, which includes video, audio, PPT, and text. This approach seems to have complete factors embraced, however there are no assessment method described in this approach.
+Kim et al. presented a smart learning services that is based on Smart Cloud Computing (SCC). As mentioned above, this approach offers smart learning services through 4S model, which are smart push, smart . Security feature is also covered in this approach, although it is just securing user's personal information through some security setting without data encryption. SCC also manages to implement context-awareness by utilizing context-aware sensors. The context-aware module considers the characteristics of each user individually, such as learners’ knowledge interests, needs, expertise, and experiences. Thus it can provide highly customized and relevant learning services to each user. Each cloud type (Iaas, Paas, Saas) are covered using smart cloud approach. Furthermore, no specific platform are used in this approach, this will lead in to a good flexibility. Semantic description based on UVA (Universal Video Adaptation) are used to provide accurate and meaningful information for the fusion content (content-database). The paper also managed to show the implementation with four fusion media, which includes video, audio, PPT, and text.
 
 % elastic model
-Elastic Model (EM)
-context-aware
-security
-multimedia support
-ontology
-flexibility
-assessment
+Elastic Model (EM) \cite{Kim2013} focuses to intellegently meet users' need. This approach is slightly similar with the SCC because EM also use the four smart concept to cloud service.
+context-aware -< yes
+security -> yes
+multidevice support -s. Yes
+ontology 
+flexibility -> yes
 
 % ontology
-Paas, Iaas, and Web 3.0 (W3)
-context-aware
-security
-multimedia support
-ontology
-flexibility
-assessment
+The approach from Nasr et al. \cite{nasr2012proposed} integrates cloud computing as a platform with the help of Web 3.0 to build intelligent learning system. This is done by making use Windows Azure\footnote{http://azure.microsoft.com/} as the platform for the system. The system also proposed ontology based model. For implementing the knowledge the leaning resources have to be described by means of metadata. This is also a resource for contextual learning. Security system in this approach is fully covered in Windows Azure platform that obviously has the enterprise level security system. However, this approach does not mention any description in multi device support and since this system depends on Windows Azure platform to be developed this system is more likely to be having less flexibility.
 
 % content-oriented
-Content-oriented (CO)
-context-aware
-security
-multimedia support
-ontology
-flexibility
-assessment
+Content-oriented approach \cite{jeong2013content} to make use of cloud computing in smart education system integrates a number of features that will enable a school to deliver and share a variety of enhanced forms of educational content including text, images, videos, and even 3D or even virtual scenes. Thus, this approach has a rich amount of contents and does support multimedia content. This concept also offers a security system, the author mentioned that to encrypt data and control privileged user access but also to protect and solve network problems in the cloud. An inference engine is utilized to provide students with personalized learning content by analyzing their preferences, learning styles, and content usage patterns. This proposed system does not use ontological approach to model the educational database or user preference. However, this system offers flexibility as it utilizes XML for data and document exchange and it also develops Common File Format to be able to manipulate various types of media content on multiple device platforms. Although this approach seems to have a comprehensive concept of cloud computing in smart learning system, this proposed concept has not been fully implemented yet.
 
 % Factors in implementation of cloud computing \cite{morgan2013factors}
 
@@ -337,44 +326,19 @@ In summary, every approaches are described in Table \ref{tab:comparison}:
   \begin{tabular}{lcccc}
      & SCC & EM & Web 3.0 & Content-oriented \\
     \hline
-    Security &  &  &  &  \\
-    Context-awareness &  &  &  &  \\
-    Multmedia support &  &  &  &  \\
-    Ontology &  &  &  &  \\
-    Assessment &  &  &  &  \\
-    Flexibility &  &  &  & 
+    Security & \cmark &  & \cmark & \cmark \\
+    Context-awareness & \cmark &  & \cmark & \cmark \\
+    Multidevice support & \cmark &  & $-$ & \cmark \\
+    Ontology & \cmark &  & \cmark &  $-$ \\
+    Flexibility & \cmark &  &  $-$ & \cmark
   \end{tabular}
-  \end{center}
-\end{table}
-
-\begin{table}
-%% Table captions on top in journal version
-  \caption{Vis Paper Acceptance Rate}
-  \label{vis_accept}
-  \scriptsize
-  \begin{center}
-    \begin{tabular}{cccc}
-      Year & Submitted & Accepted & Accepted (\%)\\
-    \hline
-      1994 &  91 & 41 & 45.1\\
-      1995 & 102 & 41 & 40.2\\
-      1996 & 101 & 43 & 42.6\\
-      1997 & 117 & 44 & 37.6\\
-      1998 & 118 & 50 & 42.4\\
-      1999 & 129 & 47 & 36.4\\
-      2000 & 151 & 52 & 34.4\\
-      2001 & 152 & 51 & 33.6\\
-      2002 & 172 & 58 & 33.7\\
-      2003 & 192 & 63 & 32.8\\
-      2004 & 167 & 46 & 27.6\\
-      2005 & 268 & 88 & 32.8\\
-      2006 & 228 & 63 & 27.6
-    \end{tabular}
   \end{center}
 \end{table}
 
   % draw a table about whole comparison, as f alsaif did on her paper
 
+  Intuitive user interface and offers an out of the box user experience. Prevent duplication of data and can manage computing resources efficiently.
+  
 \section{Concluding Remarks}
 Smart Learning can be improved using smart cloud computing.
 
