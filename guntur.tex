@@ -34,6 +34,14 @@
 \usepackage{pifont}
 \newcommand{\cmark}{\ding{51}}%
 
+% for condensing the bibliography
+\let\OLDthebibliography\thebibliography
+\renewcommand\thebibliography[1]{
+  \OLDthebibliography{#1}
+  \setlength{\parskip}{0pt}
+  \setlength{\itemsep}{0pt plus 0.3ex}
+}
+
 %% We encourage the use of mathptmx for consistent usage of times font
 %% throughout the proceedings. However, if you encounter conflicts
 %% with other math-related packages, you may want to disable it.
@@ -73,11 +81,7 @@
 %\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
 
 %% Abstract section.
-\abstract{Cloud computing services offer several benefits in its implementation to e-learning system, such as increased cost savings and also improved efficiency and convenience of educational services. Furthermore, e-learning services can be also enhanced to be smarter and more efficient using context-aware technologies as context-aware services are based on the user’s behavior. To add those technologies into existing e-learning services, a service architecture model is needed to transform the existing e-learning environment, which is situation-aware, into the environment that understands context as well. The rationale behind this paper is to study the existence or lack of existing approaches regarding the implementation of cloud computing services in smart learning system. This is done by surveying the state of the art in the area, and illustrating the requirements of context-aware smart learning system with regard to some important factors: dynamicity, scalability, dependability, security and privacy. This paper is eager to help investigating the works that have been done before for cloud computing services in smart learning system and to show the possible requirements for the future smart learning system.
-
-However, duplication bla bla.
-
-Which approach is the most suitable to be implemented.
+\abstract{Cloud computing service offers some advantages in its implementation to e-learning system, for example, increased cost savings and also improved efficiency and convenience of educational services. Furthermore, e-learning services can be also enhanced to be smarter and more efficient using context-aware technologies since context-aware services is based on the user’s behavior. To implement  the technologies into current e-learning services, a service architecture model is needed to transform the existing e-learning environment that is only situation-aware, into the environment that also understands context. The rationale behind this paper is to study the existence or lack of existing approaches regarding the implementation of cloud computing services in smart learning system. This is done by surveying the state of the art in the area, and illustrating the requirements of context-aware smart learning system with regard to some important factors: context-awareness, security, ontology, multi-device support, and flexibility. This paper is eager to help investigating the works that have been done before for cloud computing services in smart learning system and to show the possible requirements for the future smart learning system.
 } % end of abstract
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
@@ -115,6 +119,10 @@ By the turn of the century, the fast development of digital technologies is crea
 
 An increasing number of universities and educational institutions in the USA and UK are adopting cloud computing not only for increased cost savings but also for improving the efficiency and convenience of educational services. The cloud computing systems have been conducted for e-learning services. However, most of the current cloud-based education systems focus on delivering and sharing learning materials rather than supporting and establishing an integrated, total cloud-based educational service environment.
 
+Smart learning (s-learning) is an important and new paradigm of learning today. The concept of s-learning plays an important role in the creation of an efficient learning environment that offers personalized contents and easy adaptation to current education model. It also provides learners with a convenient communication environment and rich resources. However, the existing-learning infrastructure is still not complete. For example, it does not allocate necessary computing resources for s-learning system dynamically [1,2]. Currently, the majority of s-learning systems have difficulty in interfacing and sharing data with other systems, i.e., it falls short of systematic arrangement, digestion and absorption of the learning contents in other systems. This may lead to duplication in creating teaching resources and low utilization of existing resources. To resolve this problem, it is recommended to use cloud computing to support resource management. The cloud computing environment provides the necessary foundation for the integration of platform and technology. It integrates teaching and research resources distributed over various locations by utilizing existing conditions as much as possible to meet the demands of the teaching and research activities.
+
+The cloud computing environment with respect to s-learning offers new ideas and solutions in achieving interoperability among heterogeneous resources and systems. The cloud services mean that the Internet can be used as huge workspace, repository, platform, and infrastructure. Learners can access to the Internet from anywhere at anytime, using widely spread mobile devices but the existing cloud computing technologies are only passively responsive to users’ needs. This situation necessitates proactive cloud services rather than passive services. Since learners typically carry mobile devices of some kind at their hands, the volume of information and services processed through the devices continues to increase
+
 % explain a bit about facebook in education
 Both time spent on Facebook and time spent engaged in certain Facebook activities can be positively predictive, negatively predictive, or positively and negatively predictive of engagement, depending on the outcome variable. For example, time spent on Facebook is positively predictive of time spent in co-curricular activities while playing games on Facebook is negatively predictive. These results are congruent with others that have found that using the Internet and Facebook (Ellison et al., 2011) in certainways leads to better psychosocial outcomes, and that using Twitter (Junco, Heiberger et al., 2010) in certainways leads to better academic outcomes. Therefore, Facebook use in and of itself is not detrimental to academic outcomes, and can indeed be used inways that are advantageous to students.
 
@@ -122,7 +130,7 @@ Higher education administrators, faculty and staff have an opportunity to help s
 
 % draw an introduction about smart computing in general
 
-The rest of this review paper is organized as follows. Section 2 starts with general introduction into middleware. Section 3 illustrates the recent protocols and standards applied at middleware. Section 4 shows the categorization of middleware technologies according to the context of the study. Section 5 provides illustration for the main requirements of smart spaces with regard to middleware technology for services in ubiquitous computing. Section 6 gives some practices of current smart homes projects. Section 7 studies the middleware of SM4ALL and the rest of the practices described in section 6, according to the characteristics given in section 5. Section 8 describes the future directions of research work within the middleware for smart homes. Section 9 is the research conclusion.
+The rest of this review paper is organized as follows. Section 2 starts with general introduction into the difference between conventional e-learning and smart learning (s-learning). Section 3 elaborates in the relation of cloud computing in educational system including the necessity of implementing cloud computing in education and some cloud-based applications in education systems. Section 4 describes that current approach that has been carried out according to the context of the study. Section 5 provides a discussion about the approaches that has been mentioned in section 4. Finally, concluding remarks and future works are drawn in chapter 6.
 
 %% \section{Introduction} %for journal use above \firstsection{..} instead
 
@@ -144,6 +152,7 @@ So far there is no clear definition of Smart Learning. Related scholars and peop
 
 MEST (The Korean Ministry of Education, Science and Technology) defined Smart Learning as Self-directed, Motivated, Adaptive, Resource-enriched, and Technology-embedded \cite{mest}. More information on S.M.A.R.T Learning promoted by MEST is as follows:
 \begin{itemize}
+  \setlength\itemsep{-0.5em}
   \item S: Self-Directed, which means that the education system is progressing toward a self-learning system more than ever. Students’ roles transition from knowledge adopters to knowledge creators. Also, teachers become facilitators of learning.
   \item M: Motivated means education becomes experience centered and involves learning by doing; creative problem solving and individualized assessment are pursued.
   \item A: Adaptive means strengthening of the education system’s flexibility and tailoring learning for individual preference and future careers.
@@ -193,13 +202,14 @@ There are several approaches for implementing cloud computing in smart learning 
   where:
 
   \begin{itemize}
-    \item[] $Spull_i$: Smart pull—analyze the extractable content from the sensing information. 
-    \item[] $Spros_i$: Smart prospect—description of the content for target devices and delivery time.
-    \item[] $Scon_i$: Smart content—connection establishment between server and target devices.
-    \item[] $Spush_i$: Smart push—synchronized delivery of contents to target devices.
+  \setlength\itemsep{0em}
+    \item[] $Spull_i$: Smart pull $—$ analyze the extractable content from the sensing information. 
+    \item[] $Spros_i$: Smart prospect $—$ description of the content for target devices and delivery time.
+    \item[] $Scon_i$: Smart content $—$ connection establishment between server and target devices.
+    \item[] $Spush_i$: Smart push $—$ synchronized delivery of contents to target devices.
   \end{itemize}
 
-  As shown in the definition, the E4S pulls the sensing data and analyzes the extractable contents. The context-aware module is functioning as an information filter that extracts only the intended information from the sensing data. There can be multiple contexts in sensing data depending on the services available in the learning management system. They are individually synchronized and pushed by the smart learning service. The sensing data analysis process identifies the different backgrounds of each learner and accommodates each learner’s needs individually. Learning contents are customized based on the background and learning needs. It means that different learning content may have unique technical and functional characteristics and may use different communication channels. Each customized learning contents may differ in modality (i.e., text-based, audio, video, etc.), capability (i.e., bandwidth), and timing (i.e., types of synchronization).
+  As shown in the definition, the E4S pulls the sensing data and analyzes the extractable contents. The context-aware module is functioning as an information filter that extracts only the intended information from the sensing data. There can be multiple contexts in sensing data depending on the services available in the learning management system. They are individually synchronized and pushed by the smart learning service. The sensing data analysis process identifies the different backgrounds of each learner and accommodates each learner's needs individually. Learning contents are customized based on the background and learning needs. It means that different learning content may have unique technical and functional characteristics and may use different communication channels. Each customized learning contents may differ in modality (i.e., text-based, audio, video, etc.), capability (i.e., bandwidth), and timing (i.e., types of synchronization).
 
   The system also offers context-aware services, since Context-aware is important \cite{Pratama2014}. A research also contributed to implement context-aware services in educational system \cite{Scott2010}. However, cloud computing were not used as this study only focuses on context-aware in classroom setup only.
 
@@ -247,7 +257,7 @@ There are several approaches for implementing cloud computing in smart learning 
 
   The double cube in Figure \ref{rating} is stored rating R(Ua, Ui, T, L, D) for the filtered proves $Ua \times Ui \times T \times L \times D$, where the five tables define the sets of user action, interest, location, time and device associated with Action, Interest, Time x Location and Device dimensions respectively.
 
-  For example, the rating R(303,1302,2,ASP1)=7 in Fig. 3 is means that for the action with action ID 303, the user's interest learning object is interest ID 1302 and using this item mainly Time ID 5 in the Location Company, rating 7was specified during in the device ID ASP1. In other words, the user every afternoon is using application (ID 1302) at the street using smart phone. So that filtered data is basis for creating user behaviour database (DB) for providing smart learning service. According to following classification the situation is determine then user behaviour database will be created.
+  For example, the rating R(303,1302,2,ASP1)=7 in Fig. 3 is means that for the action with action ID 303, the user's interest learning object is interest ID 1302 and using this item mainly Time ID 5 in the Location Company, rating 7was specified during in the device ID ASP1. In other words, the user every afternoon is using application (ID 1302) at the street using smart phone. So that filtered data is basis for creating user behavior database (DB) for providing smart learning service. According to following classification the situation is determine then user behavior database will be created.
 
   
   \subsection{Cloud and Web 3.0}
@@ -301,12 +311,7 @@ This study tries to evaluate the above mentioned approach of cloud computing in 
 Kim et al. presented a smart learning services that is based on Smart Cloud Computing (SCC). As mentioned above, this approach offers smart learning services through 4S model, which are smart push, smart . Security feature is also covered in this approach, although it is just securing user's personal information through some security setting without data encryption. SCC also manages to implement context-awareness by utilizing context-aware sensors. The context-aware module considers the characteristics of each user individually, such as learners’ knowledge interests, needs, expertise, and experiences. Thus it can provide highly customized and relevant learning services to each user. Each cloud type (Iaas, Paas, Saas) are covered using smart cloud approach. Furthermore, no specific platform are used in this approach, this will lead in to a good flexibility. Semantic description based on UVA (Universal Video Adaptation) are used to provide accurate and meaningful information for the fusion content (content-database). The paper also managed to show the implementation with four fusion media, which includes video, audio, PPT, and text.
 
 % elastic model
-Elastic Model (EM) \cite{Kim2013} focuses to intellegently meet users' need. This approach is slightly similar with the SCC because EM also use the four smart concept to cloud service.
-context-aware -< yes
-security -> yes
-multidevice support -s. Yes
-ontology 
-flexibility -> yes
+Elastic Model (EM) \cite{Kim2013} focuses to intelligently meet users' need. The approach is slightly similar with the SCC because EM also use the four smart concept to cloud service. This proposed system also support multiple devices just as SCC approach. Furthermore, this system is independent from any platform and this make this approach has a good flexibility. Security factor is also slightly described to secure each user's personal information using some security setting e.g. user's schedule and location. This approach also utilizes context-aware by implementing behaviour sensing to provide smart learnign service to each individual user. However, there are no ontological approach explained in the paper. 
 
 % ontology
 The approach from Nasr et al. \cite{nasr2012proposed} integrates cloud computing as a platform with the help of Web 3.0 to build intelligent learning system. This is done by making use Windows Azure\footnote{http://azure.microsoft.com/} as the platform for the system. The system also proposed ontology based model. For implementing the knowledge the leaning resources have to be described by means of metadata. This is also a resource for contextual learning. Security system in this approach is fully covered in Windows Azure platform that obviously has the enterprise level security system. However, this approach does not mention any description in multi device support and since this system depends on Windows Azure platform to be developed this system is more likely to be having less flexibility.
@@ -316,7 +321,7 @@ Content-oriented approach \cite{jeong2013content} to make use of cloud computing
 
 % Factors in implementation of cloud computing \cite{morgan2013factors}
 
-In summary, every approaches are described in Table \ref{tab:comparison}:
+To sum up the above discussion, Table \ref{tab:comparison} depicts the four approach in summary:
 
 \begin{table}[htb]
   \caption{This table shows some data}
@@ -326,33 +331,24 @@ In summary, every approaches are described in Table \ref{tab:comparison}:
   \begin{tabular}{lcccc}
      & SCC & EM & Web 3.0 & Content-oriented \\
     \hline
-    Security & \cmark &  & \cmark & \cmark \\
-    Context-awareness & \cmark &  & \cmark & \cmark \\
-    Multidevice support & \cmark &  & $-$ & \cmark \\
-    Ontology & \cmark &  & \cmark &  $-$ \\
-    Flexibility & \cmark &  &  $-$ & \cmark
+    Security & \cmark & \cmark & \cmark & \cmark \\
+    Context-awareness & \cmark & \cmark & \cmark & \cmark \\
+    Multidevice support & \cmark & \cmark & $-$ & \cmark \\
+    Ontology & \cmark & $-$ & \cmark &  $-$ \\
+    Flexibility & \cmark & \cmark &  $-$ & \cmark
   \end{tabular}
   \end{center}
 \end{table}
 
   % draw a table about whole comparison, as f alsaif did on her paper
+From Table \ref{tab:comparison}, we can conclude that SCC has all factors that the author wants to assess. Some other approaches lack in one or two factor and there are no approach that lacks three or more factors.
 
-  Intuitive user interface and offers an out of the box user experience. Prevent duplication of data and can manage computing resources efficiently.
-  
+Moreover, in order to deliver an effective and successful smart learning system, intuitive user interface and an out of the box user experience that will make the system easier to be used might be factors that has to be keep in mind since it is mentioned in \cite{Sun2008} that ease of use is one factor that drives a successful learning system. To sum up, the author suggests that adaptation of cloud computing in smart learning system can be said successful if it is abele to prevent duplication of data and can manage computing resources efficiently.
+
 \section{Concluding Remarks}
-Smart Learning can be improved using smart cloud computing.
+Cloud computing services offer several benefits in its implementation to e-learning system, such as increased cost savings and also improved efficiency and convenience of educational services. Furthermore, e-learning services can be also enhanced to be smarter and more efficient using context-aware technologies as context-aware services are based on the users behavior. This paper has compared and reviewed several researches and articles about cloud computing services in smart learning environment in terms of context-awareness, security, ontology, multi-device support, and flexibility. These factors are drawn out from a research that tried to determine factors that drive the successfulness of e-learning\cite{Sun2008}. The result showed that there is only SCC approach that is able to cover all factors used in assessment.
 
-Since the main goal for this paper is to study whether the existing middleware practices at smart homes support the requirements of ubiquitous computing environments or not. This paper concludes that there are good smart homes infrastructures and practices e.g., SM4All and Gaia projects, that consider most of the basics of the ubiquitous computing needs (e.g., dynamicity, scalability, depend- ability, security and/or privacy). This done by first introducing the concept of middleware and its protocols and standards which are relevant for the projects e.g., UPnP and OSGi. Then, I classify middleware according to three types: object-oriented, service based, and object oriented base. Following this, a definition of requirements for smart spaces with regard to middleware technology are highlighted. These requirements are kept generic (e.g., dynamicity, dependability, scalability, security, and privacy) in order to allow the identification of criteria for the evaluation of middleware technology.
-
-After that, I choose SM4ALL, RUNES, ANGEL, GTSH, Gaia, and Serenity as examples of the current practice middleware technologies projects at smart homes, discussing them with their comparisons for the middleware part according to the mentioned classification and the given ubiquitous requirements. The findings are that some projects touched the topics of dynamicity, scalability, and dependability at the middleware-service level. Also, a few of them filled the security and privacy needs. The only project that covers all defined requirements is SM4All.
-
-However, the horizons of the present practices middleware will have to expand more and more to cater for the new requirements of ubiquitous computing (e.g., support of heterogeneity, mobility, tolerance for component failures, controlling and traceability, and ease of deployment and configuration) if they want to survive in the emerging smart space environments. This study help giving a look of the existing works of middleware at smart homes, and showing the requirements for the future vision. Moreover, it is not clear at this point exactly what smart space middleware will consist of. What is likely, however, is that various smart space architectures will emerge independently of each other which greatly increases the need for middleware to provide interoperability between heterogeneous systems.
-
-This paper has compared and reviewed several researches and articles about cloud computing services in smart learning environment. The result showed that there is no approaches that is able to cover all factors used in assessment. However, the nearest approaches is the work presented by John Doe et al. \cite{}.
-
-Recommed the cloud computing system to consider encryption in order to secure the personal data.
-
-Further studies, which take these variables into account, will need to be undertaken.
+Further studies with regard to cloud computing should in smart learning system should consider security as an important issue as users' information are stored in the system. Encryption can be taken into account for improving the security of the system and to protect personal data from any unwanted access. The comprehensive survey are needed to be undertaken in order to assess the capability and the usefulness of the system. Moreover, a benchmark about how system runs will show the benefits and how efficient cloud computing has made the smart learning system become. To sum up, further studies, which take more variables into account, will need to be undertaken.
 
 % \acknowledgements{
 % The authors wish to thank Dr. for the help on this work.}
