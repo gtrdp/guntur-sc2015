@@ -1,30 +1,5 @@
-\documentclass[journal]{vgtc}                % final (journal style)
-% \documentclass[review,journal]{vgtc}         % review (journal style)
-%\documentclass[widereview]{vgtc}             % wide-spaced review
-%\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
-%\documentclass[electronic,journal]{vgtc}     % electronic version, journal
+\documentclass[journal]{vgtc}
 \let\ifpdf\relax
-
-%% Uncomment one of the lines above depending on where your paper is
-%% in the conference process. ``review'' and ``widereview'' are for review
-%% submission, ``preprint'' is for pre-publication, and the final version
-%% doesn't use a specific qualifier. Further, ``electronic'' includes
-%% hyperreferences for more convenient online viewing.
-
-%% Please use one of the ``review'' options in combination with the
-%% assigned online id (see below) ONLY if your paper uses a double blind
-%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
-%% in the past.
-
-%% Please note that the use of figures is not permitted on the first page
-%% of the journal version.  Figures should begin on the second page and be
-%% in CMYK or Grey scale format, otherwise, colour shifting may occur
-%% during the printing process.  Papers submitted with figures on the
-%% first page will be refused.
-
-%% These three lines bring in essential packages: ``mathptmx'' for Type 1
-%% typefaces, ``graphicx'' for inclusion of EPS figures. and ``times''
-%% for proper handling of the times font family.
 
 \usepackage{mathptmx}
 \usepackage{graphicx}
@@ -42,55 +17,31 @@
   \setlength{\itemsep}{0pt plus 0.3ex}
 }
 
-%% We encourage the use of mathptmx for consistent usage of times font
-%% throughout the proceedings. However, if you encounter conflicts
-%% with other math-related packages, you may want to disable it.
-
-%% If you are submitting a paper to a conference for review with a double
-%% blind reviewing process, please replace the value ``0'' below with your
-%% OnlineID. Otherwise, you may safely leave it at ``0''.
 \onlineid{0}
 
-%% declare the category of your paper, only shown in review mode
 \vgtccategory{Research}
 
-%% allow for this line if you want the electronic option to work properly
 \vgtcinsertpkg
-
-%% In preprint mode you may define your own headline.
-%\preprinttext{To appear in an IEEE VGTC sponsored conference.}
-
-%% Paper title.
 
 \title{A Study about Cloud Computing Services in Smart Learning System}
 
-%% This is how authors are specified in the journal style
-
-%% indicate IEEE Member or Student Member in form indicated below
 \author{Guntur Dharma Putra}
 \authorfooter{
-%% insert punctuation at end of each item
 \item
   Guntur Dharma Putra is a Master Student Computing Science at the RuG, e-mail: g.d.putra@student.rug.nl.
 }
 
-%% A teaser figure is NOT to be included.
 
-%other entries to be set up for journal
 \shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: A Study about Cloud Computing Services in Smart Learning System}
-%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+
 
 %% Abstract section.
 \abstract{Cloud computing service offers some advantages in its implementation to e-learning system, for example, increased cost savings and also improved efficiency and convenience of educational services. Furthermore, e-learning services can be also enhanced to be smarter and more efficient using context-aware technologies since context-aware services is based on the user’s behavior. To implement  the technologies into current e-learning services, a service architecture model is needed to transform the existing e-learning environment that is only situation-aware, into the environment that also understands context. The rationale behind this paper is to study the existence or lack of existing approaches regarding the implementation of cloud computing services in smart learning system. This is done by surveying the state of the art in the area, and illustrating the requirements of context-aware smart learning system with regard to some important factors: context-awareness, security, ontology, multi-device support, and flexibility. This paper is eager to help investigating the works that have been done before for cloud computing services in smart learning system and to show the possible requirements for the future smart learning system.
 } % end of abstract
 
-%% Keywords that describe your work. Will show as 'Index Terms' in journal
-%% please capitalize first letter and insert punctuation after last keyword
 \keywords{e-learning, smart learning services, cloud computing, context-aware, Internet enabled learning.}
 
-%% ACM Computing Classification System (CCS). 
-%% See <http://www.acm.org/class/1998/> for details.
-%% The ``\CCScat'' command takes four arguments.
+
 
 \CCScatlist{ % not used in journal version
   \CCScat{K.6.1}{Management of Computing and Information Systems}%
@@ -98,20 +49,12 @@
   \CCScat{K.7.m}{The Computing Profession}{Miscellaneous}{Ethics}
 }
 
-%% Copyright space is enabled by default as required by guidelines.
-%% It is disabled by the 'review' option or via the following command:
-% \nocopyrightspace
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%% The ``\maketitle'' command must be the first command after the
-%% ``\begin{document}'' command. It prepares and prints the title block.
-
-%% the only exception to this rule is the \firstsection command
 \firstsection{Introduction}
 \maketitle
 
@@ -121,19 +64,11 @@ An increasing number of universities and educational institutions in the USA and
 
 Smart learning (s-learning) is and new paradigm of learning. The concept of s-learning acts as an important role in the creation of an efficient learning environment that offers personalized contents. It also supplies students with a nice communication environment and thousands of resources. However, the existing-learning infrastructure is still not complete. For instance, it does not allocate necessary computing resources for s-learning system dynamically \cite{Uden2007}. Today, the majority of s-learning systems have some problems in interfacing and sharing data with other systems. This might lead to duplication of data and low utilization of resources. To overcome this problem, it is advised to use cloud computing to support resource management. The cloud computing environment has the needed foundation for the integration of platform and technology. It combines teaching resources distributed over various locations by utilizing existing conditions as much as possible to meet the demands of the teaching activities.
 
-% explain a bit about facebook in education
-% \cite{Junco2012}.
-
 In this paper, some approaches of cloud computing in smart learning system is discussed and evaluated. The evaluation of cloud computing in smart learning system approach is based on a study presented by Sun et al. \cite{Sun2008}. That work alleged that there are some factors that push a e-learning system to be successful. The work collected nearly 300 questionnaire and a stepwise multiple regression analysis was conducted to extract some potential information. The result showed that the factors are learner's computer anxiety, instructor attitude toward e-Learning, e-Learning course flexibility, e-Learning course quality, perceived usefulness, perceived ease of use, and diversity in assessment are the critical factors affecting learner's perceived satisfaction \cite{Sun2008}. However, since our study only tries to investigate the technical implementation of cloud computing without the involvement of students, instructors, or courses, factors that are possible to be used is only flexibility of the system. Furthermore, in order to evaluate the approaches deeper, we add some more factors that are relevant with smart learning system, such as context-awareness, security, multi-device support, and ontology utilization.
-
-% draw an introduction about smart computing in general
 
 The rest of this review paper is organized as follows. Section 2 starts with general introduction into the difference between conventional e-learning and smart learning (s-learning). Section 3 elaborates in the relation of cloud computing in educational system including the necessity of implementing cloud computing in education and some cloud-based applications in education systems. Section 4 describes that current approach that has been carried out according to the context of the study. Section 5 provides a discussion about the approaches that has been mentioned in section 4. Finally, concluding remarks and future works are drawn in chapter 6.
 
-%% \section{Introduction} %for journal use above \firstsection{..} instead
-
 \section{E-Learning and Smart Learning}
-% explain about e learning online learning distance learning
 There are several terminologies that refer to a learning environment with electronic devices, computers, or Internet. A study tried to investigate these terminologies when applied to some particular scenarios \cite{Moore2011}. With around 40 respondents involved in the survey, the result alleged that definitions found in various articles mirror the conflicting responses provided by the respondents in this study. The findings showed great differences in the meaning of foundational terms that are used in the field, but also provide implications internationally for the referencing, sharing, and the collaboration of results detailed in varying research studies \cite{Moore2011}.
 
 % conventional e-learning
@@ -172,12 +107,9 @@ This section describes the close relation between cloud computing and educationa
   Several works have presented their approach to implement cloud computing in educational system. For example, Casquero et al. \cite{casquero2008igoogle} presented a framework based on iGoogle and using the Google Apps platform for the development of a network of cooperative personal learning environments. They discussed the integration of institutional and external services in order to provide customized support to faculty members in their daily activities. They take the advantage of Google's framework as a testbed for the research, implementation and testing of their educational purpose services as well.
 
   Even though much work has been carried out with regard to adopting cloud computing for educational systems, further studies need to be conducted to develop more diverse forms of cloud-based education systems, in more innovative and efficient ways \cite{jeong2013content}. Meanwhile, most of the existing cloud-based education systems are concentrating on delivering and sharing learning materials and teaching activities, rather than constructing and supporting an integrated, total cloud-based educational environment.
-  %insert some tables here
 
 \section{Cloud Computing in Smart Learning System Approaches}
 There are several approaches for implementing cloud computing in smart learning environment. This study has evaluated several recent approaches \cite{Kim2013,s110807835,jeong2013content,jeong2013cloud,nasr2012proposed}. Those approaches is categorized into certain categories: smart cloud computing, elastic model, cloud and Web 3.0, and content oriented approach.
-
-% The literature search covered contributions until and including December 2012, and was performed using the databases considered most relevant to find the targeted studies: IEEE Xplore Digital Library, ACM Digital Library, ScienceDirect, Scopus and Springer. The search string used was: (“cloud” OR “virtualization”)AND (“education” OR “learning” OR “teaching”). This search string was conceived with the aim of retrieving a high number of the studies available in the databases thatwere relevant for the revieweven if the results of the query returned many other works not relevant for the survey (i.e. the query pursued having a high recall in spite of a low precision, in terms of information retrieval). Relevant studies not found after this searchwere expected to appear among the referenced bibliography of these results, as itwas the case, and theywere also included in a second analysis iteration. Only primary studies published in English and contained in journals (both printed
 
   \subsection{Smart Cloud Computing}
   Smart Cloud Computing (SCC) has the capability to provide a smart learning environment by using elastic computing for 4S model. It offers system standardization and describe how to manages it properly. A conventional e-learning system is only capable to display a single content on a single device or multiple contents on one device.The SCC can deliver s-learning to the users so they can use multiple devices to render multi learning contents. The SCC uses context-aware sensing to provide personalized contents. Sensing is carried out through the location and IP address of each device. Furthermore, the architecture of the model is shown in the Figure \ref{scc} \cite{s110807835}.
@@ -284,10 +216,7 @@ There are several approaches for implementing cloud computing in smart learning 
     \label{feature}
   \end{figure}
 
-% disguise this part, bcs this is really important part, dont mess with it
 \section{Discussion}
-% describe: what drives a successful e-learning comprehensively
-% and reflects to the papers.
 Some benefits of cloud computing in education are drawn in a study by Gonzalez et al. \cite{Gonzalez-Martinez2014}. Those advantages are a wealth of online application to support education, flexible creation of learning environments, support for mobile learning, computing-intensive support for teaching, learning, and evaluation, scalability of learning systems and applications, costs saving in hardware, cost saving in software.
 
 This study tries to evaluate the above mentioned approach of cloud computing in smart learning system based on a study presented by Sun et al. \cite{Sun2008}. That work alleged that there are some factors that push a e-learning system to be successful. The work collected nearly 300 questionnaire and a stepwise multiple regression analysis was conducted to extract some potential information. The result showed that the factors are learner's computer anxiety, instructor attitude toward e-Learning, e-Learning course flexibility, e-Learning course quality, perceived usefulness, perceived ease of use, and diversity in assessment are the critical factors affecting learner's perceived satisfaction \cite{Sun2008}. However, since our study only tries to investigate the technical implementation of cloud computing without the involvement of students, instructors, or courses, factors that are possible to be used are only flexibility and assessment. Furthermore, in order to evaluate the approaches deeper, we add some more factors that are relevant with smart learning system, such as context-awareness, security, multi-media support, and ontology utilization.
@@ -303,8 +232,6 @@ The approach from Nasr et al. \cite{nasr2012proposed} integrates cloud computing
 
 % content-oriented
 Content-oriented approach \cite{jeong2013content} to make use of cloud computing in smart education system integrates a number of features that will enable a school to deliver and share a variety of enhanced forms of educational content including text, images, videos, and even 3D or even virtual scenes. Thus, this approach has a rich amount of contents and does support multimedia content. Moreover, this content-oriented approach also support multiple-device with multiple screen size and features. This concept also offers a security system, the author mentioned that to encrypt data and control privileged user access but also to protect and solve network problems in the cloud. An inference engine is utilized to provide students with personalized learning content by analyzing their preferences, learning styles, and content usage patterns. This proposed system does not use ontological approach to model the educational database or user preference. However, this system offers flexibility as it utilizes XML for data and document exchange and it also develops Common File Format to be able to manipulate various types of media content on multiple device platforms. Although this approach seems to have a comprehensive concept of cloud computing in smart learning system, this proposed concept has not been fully implemented yet.
-
-% Factors in implementation of cloud computing \cite{morgan2013factors}
 
 \begin{table}[htb]
   \caption{This table shows some data}
@@ -333,11 +260,11 @@ Cloud computing services offer several advantages in its implementation to e-lea
 
 Further studies with regard to cloud computing should in smart learning system should consider security as an important issue as users' information are stored in the system. Encryption can be taken into account for improving the security of the system and to protect personal data from any unwanted access. The comprehensive survey are needed to be undertaken in order to assess the capability and the usefulness of the system. Moreover, a benchmark about how system runs will show the benefits and how efficient cloud computing has made the smart learning system become. To sum up, further studies, which take more variables into account, will need to be undertaken.
 
-% \acknowledgements{
-% The authors wish to thank Dr. for the help on this work.}
+\acknowledgements{
+The authors wish to thank Dr. for the help on this work.
+}
 
 \bibliographystyle{unsrt}
-%%use following if all content of bibtex file should be shown
 % \nocite{*}
 \bibliography{sc2015}
 \end{document}
