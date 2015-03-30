@@ -3,19 +3,3 @@
 
 ## Author
 Guntur Dharma Putra; s2829193; g.d.putra@student.rug.nl
-
-## First Review
-Here is the summary from first review.
-
-### Expert Review
-- One
-- Two
-
-### Review 1
-- One
-- Two
-
-### Review 2
-- One
-- Two
-
